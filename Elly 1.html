@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Elly 💌</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://amsterdamian.com/wp-content/uploads/2021/03/tulips-7jpg_s.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .screen {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .active {
+      display: flex;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .intro h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #ffeef2;
+    }
+
+    .intro button {
+      padding: 12px 24px;
+      font-size: 1.2em;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    .intro button:hover {
+      background-color: #ff85c1;
+    }
+
+    .overlay {
+      background-color: rgb(248, 233, 233);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 1000px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.5em;
+      color: #cd5672;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      margin-bottom: 2em;
+      color: #cd5672;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .photo-card {
+      width: 300px;
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+      transition: transform 0.3s;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.03);
+    }
+
+    .caption {
+      padding: 10px;
+      font-size: 1em;
+      color: #333;
+      background-color: #e16a6a;
+      font-weight: 500;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      p { font-size: 1em; }
+      .photo-card {
+        width: 90%;
+      }
+      .photo-card img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Screen -->
+  <div id="home" class="screen intro active">
+    <div>
+      <h1>For Elly 💌</h1>
+      <button onclick="showAnniversary()">Open</button>
+    </div>
+  </div>
+
+  <!-- Anniversary Screen -->
+  <div id="anniversary" class="screen">
+    <div class="overlay">
+      <h1>Happy 7 Month Anniversary 🌸</h1>
+      <p>I know I can't be there with you right now, but I cherish every moment we've shared. I’m so grateful for you even if i don't show it, and I can’t wait for all the memories we’ll continue to make. I love you, Elly 💖</p>
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/buildAssets%2FTxgPNk2KZKM9lts5EFTr%2Fimg_0322.jpg?alt=media&token=2db64a6c-3308-40e5-bb85-8bdfda6aff73" alt="Photo 1">
+          <div class="caption">Successful Suitcase Rummage</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/buildAssets%2FTxgPNk2KZKM9lts5EFTr%2Fimg_0993.jpg?alt=media&token=4cf78323-83c1-4b69-a830-24bda274896a" alt="Photo 2">
+          <div class="caption">Our Painting Date</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/buildAssets%2FTxgPNk2KZKM9lts5EFTr%2Fimg_9871.jpg?alt=media&token=ca02f570-3592-471b-9425-51045387e4f5" alt="Photo 3">
+          <div class="caption">Wardrobe Swap Wooo</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/buildAssets%2FPrWdn00KRqq1WqGt79IW%2Fimg_1238.jpg?alt=media&token=2b8fd76a-7be9-4e09-8a48-53aeeef8f330" alt="Photo 4">
+          <div class="caption">Our Silly Moments</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/buildAssets%2FPrWdn00KRqq1WqGt79IW%2Fimg_0872.jpg?alt=media&token=4c5fbaa4-a71a-499d-8f63-b1cecdbf23c3" alt="Photo 5">
+          <div class="caption">Your Birthday</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/buildAssets%2FPrWdn00KRqq1WqGt79IW%2Fimg_0508.jpg?alt=media&token=30dcaa2c-11b7-4170-8b81-111223ced5ab" alt="Photo 6">
+          <div class="caption">Awww She's So Tall</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/buildAssets%2FPrWdn00KRqq1WqGt79IW%2Fimg_0514.jpg?alt=media&token=59de08a2-e876-4c47-a829-fbe0801a6cd3" alt="Photo 7">
+          <div class="caption">You + Me = 💕</div>
+        </div>
+        <div class="photo-card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/codedex-io.appspot.com/o/buildAssets%2FPrWdn00KRqq1WqGt79IW%2Fimg_8643.jpg?alt=media&token=a8e21764-3716-4303-bdb6-dc61c790cbb2" alt="Photo 8">
+          <div class="caption">Where It Officially Started</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showAnniversary() {
+      document.getElementById('home').classList.remove('active');
+      document.getElementById('anniversary').classList.add('active');
+      document.querySelector('#anniversary .overlay').scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
